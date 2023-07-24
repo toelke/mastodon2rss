@@ -1,0 +1,6 @@
+VENV=$HOME/.venvs/mastodon2rss
+if [ ! -d $VENV ]; then
+	virtualenv $VENV
+fi
+source $VENV/bin/activate
+pip install -r requirements.txt
