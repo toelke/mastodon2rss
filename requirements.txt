@@ -385,9 +385,9 @@ portend==3.2.0 \
     --hash=sha256:5250a352c19c959d767cac878b829d93e5dc7625a5143399a2a00dc6628ffb72 \
     --hash=sha256:8b3fe3f78779df906559a21d9eaa6e21c8fa5a7a8cc76362cbbe1e16777399cf
     # via cherrypy
-pydantic==2.0.3 \
-    --hash=sha256:614eb3321eb600c81899a88fa9858b008e3c79e0d4f1b49ab1f516b4b0c27cfb \
-    --hash=sha256:94f13e0dcf139a5125e88283fc999788d894e14ed90cf478bcc2ee50bd4fc630
+pydantic==2.3.0 \
+    --hash=sha256:1607cc106602284cd4a00882986570472f193fde9cb1259bceeaedb26aa79a6d \
+    --hash=sha256:45b5e446c6dfaad9444819a293b921a40e1db1aa61ea08aede0522529ce90e81
     # via inflect
 pydantic-core==2.3.0 \
     --hash=sha256:019c5c41941438570dfc7d3f0ae389b2425add1775a357ce1e83ed1434f943d6 \
