@@ -144,6 +144,7 @@ class MastodonFeed:
                 else:
                     if post['reblog']['url'] is not None:
                         fe.link(href=post['reblog']['url'])
+                        fe.id(post['reblog']['uri'])
                 fe.title(f"Post by {post['account']['username']} at {post['created_at']}")
                 fe.content(content="".join(render_post(post)), type="CDATA")
 
