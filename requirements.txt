@@ -145,7 +145,7 @@ jaraco-context==4.3.0 \
     --hash=sha256:4dad2404540b936a20acedec53355bdaea223acb88fd329fa6de9261c941566e \
     --hash=sha256:5d9e95ca0faa78943ed66f6bc658dd637430f16125d86988e77844c741ff2f11
     # via jaraco-text
-jaraco-functools==3.8.1 \
+jaraco-functools==4.0.0 \
     --hash=sha256:784718fbc5d70c5a7bd881c362d23d561913102eb1381cec21327c8ebda3351c \
     --hash=sha256:e96a0d4ea455005a4092ce89a69ea0f7fb7e22807ad3b1008f9bf70c48d1cf2e
     # via
@@ -667,3 +667,6 @@ setuptools==68.2.2 \
     --hash=sha256:4ac1475276d2f1c48684874089fefcd83bd7162ddaafb81fac866ba0db282a87 \
     --hash=sha256:b454a35605876da60632df1a60f736524eb73cc47bbc9f3f1ef1b644de74fd2a
     # via zc-lockfile
+jaraco.functools==4.0.0 \
+    --hash=sha256:c279cb24c93d694ef7270f970d499cab4d3813f4e08273f95398651a634f0925 \
+    --hash=sha256:daf276ddf234bea897ef14f43c4e1bf9eefeac7b7a82a4dd69228ac20acff68d
