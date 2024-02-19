@@ -525,9 +525,9 @@ six==1.16.0 \
     # via
     #   mastodon-py
     #   python-dateutil
-tempora==5.5.0 \
-    --hash=sha256:13e4fcc997d0509c3306d6841f03e9381b7e5e46b2bebfae9151af90085f0c26 \
-    --hash=sha256:defd976c9144fc9f20432ed0d75926c1c48dd0c7c701b3493e02d5316598e8fe
+tempora==5.5.1 \
+    --hash=sha256:33c1ef063c41d9ea14e7c2f809783241c982863e813d6a9cd138d1a48d796ce8 \
+    --hash=sha256:a2bb51e2121976d931347b3e433917c364b83fdd5f64ef27336c865bf1fb0f75
     # via portend
 typing-extensions==4.9.0 \
     --hash=sha256:23478f88c37f27d76ac8aee6c905017a143b0b1b886c3c9f66bc2fd94f9f5783 \
