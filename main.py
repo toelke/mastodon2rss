@@ -17,13 +17,13 @@ logging.basicConfig(level=logging.DEBUG)
 
 SCOPES = ["read:statuses", "read:accounts"]
 
-OWN_MASTODON_INSTANCE = os.environ['OWN_MASTODON_INSTANCE']
-PUBLIC_URL = URL(os.environ['PUBLIC_URL'])
+OWN_MASTODON_INSTANCE = os.environ["OWN_MASTODON_INSTANCE"]
+PUBLIC_URL = URL(os.environ["PUBLIC_URL"])
 
 
 def get_smaller_image(url):
     return str(
-        PUBLIC_URL / "image" % {"id": base64.urlsafe_b64encode(url.encode('utf-8')).decode('utf-8')}
+        PUBLIC_URL / "image" % {"id": base64.urlsafe_b64encode(url.encode("utf-8")).decode("utf-8")}
     )
 
 
@@ -54,15 +54,15 @@ def render_post(post):
                 f'<img src="{ma["url"]}"/>',
                 "</div>",
             )
-        elif ma["type"] in ('video', 'gifv'):
+        elif ma["type"] in ("video", "gifv"):
             yield from ("<div>", f'<video src="{ma["url"]}"/>', "</div>")
         else:
             yield from ("<div>", ma["type"], "</div>")
-    if post['card'] is not None:
-        if post['card']['type'] == "link":
+    if post["card"] is not None:
+        if post["card"]["type"] == "link":
             img = (
                 f"""<div><img src="{get_smaller_image(post['card']['image'])}"/></div>"""
-                if post['card']['image'] is not None
+                if post["card"]["image"] is not None
                 else ""
             )
             yield f"""<a href="{post['card']['url']}" target="_blank" rel="noopener noreferrer">{img}<div><strong>{post['card']['title']}</strong></div></a>"""
@@ -72,19 +72,19 @@ def render_post(post):
 
 def get_app():
     """Return client_id, secret, api_base_url, maybe loaded from fs, maybe newly created"""
-    app = Path('./app')
+    app = Path("./app")
     if not app.exists():
-        api_base_url = f'https://{OWN_MASTODON_INSTANCE}'
+        api_base_url = f"https://{OWN_MASTODON_INSTANCE}"
         client_id, client_secret = Mastodon.create_app(
-            'mastodon2rss',
+            "mastodon2rss",
             api_base_url=api_base_url,
             to_file=app,
             scopes=SCOPES,
-            redirect_uris=[str(PUBLIC_URL / 'login_token')],
+            redirect_uris=[str(PUBLIC_URL / "login_token")],
         )
     else:
         client_id, client_secret, api_base_url, _ = (
-            x.strip() for x in app.open('r', encoding='utf-8').readlines()
+            x.strip() for x in app.open("r", encoding="utf-8").readlines()
         )
 
     return client_id, client_secret, api_base_url
@@ -92,7 +92,7 @@ def get_app():
 
 class MastodonFeed:
     def _try_login(self):
-        creds = Path('./creds')
+        creds = Path("./creds")
 
         if creds.exists():
             self._mastodon = Mastodon(access_token=creds)
@@ -108,7 +108,7 @@ class MastodonFeed:
 
     @cherrypy.expose
     def image(self, id):
-        cherrypy.response.headers['Content-Type'] = "image/png"
+        cherrypy.response.headers["Content-Type"] = "image/png"
 
         return small_image(id)
 
@@ -124,26 +124,26 @@ class MastodonFeed:
             return
 
         raise cherrypy.HTTPRedirect(
-            self._mastodon.auth_request_url(scopes=SCOPES, redirect_uris=str(PUBLIC_URL / 'login_token'))
+            self._mastodon.auth_request_url(scopes=SCOPES, redirect_uris=str(PUBLIC_URL / "login_token"))
         )
 
     @cherrypy.expose
     def feed(self):
-        cherrypy.response.headers['Content-Type'] = 'application/atom+xml'
+        cherrypy.response.headers["Content-Type"] = "application/atom+xml"
         if self.logged_in:
             fg = FeedGenerator()
-            fg.title('Mastodon home Feed')
-            fg.language('en')
-            fg.id(f'https://{OWN_MASTODON_INSTANCE}/')
+            fg.title("Mastodon home Feed")
+            fg.language("en")
+            fg.id(f"https://{OWN_MASTODON_INSTANCE}/")
             for post in self._mastodon.timeline():
                 fe = fg.add_entry()
-                fe.id(post['uri'])
-                if post['url'] is not None:
-                    fe.link(href=post['url'])
+                fe.id(post["uri"])
+                if post["url"] is not None:
+                    fe.link(href=post["url"])
                 else:
-                    if post['reblog']['url'] is not None:
-                        fe.link(href=post['reblog']['url'])
-                        fe.id(post['reblog']['uri'])
+                    if post["reblog"]["url"] is not None:
+                        fe.link(href=post["reblog"]["url"])
+                        fe.id(post["reblog"]["uri"])
                 fe.title(f"Post by {post['account']['username']} at {post['created_at']}")
                 fe.content(content="".join(render_post(post)), type="CDATA")
 
@@ -153,17 +153,17 @@ class MastodonFeed:
 
     @cherrypy.expose
     def login_token(self, code, **_):
-        creds = Path('./creds')
+        creds = Path("./creds")
         self._mastodon.log_in(
             code=code,
             to_file=creds,
             scopes=SCOPES,
-            redirect_uri=str(PUBLIC_URL / 'login_token'),
+            redirect_uri=str(PUBLIC_URL / "login_token"),
         )
         self.logged_in = True
         raise cherrypy.HTTPRedirect(str(PUBLIC_URL))
 
 
 if __name__ == "__main__":
-    cherrypy.config.update({'server.socket_host': '0.0.0.0', 'server.socket_port': 12345})
+    cherrypy.config.update({"server.socket_host": "0.0.0.0", "server.socket_port": 12345})
     cherrypy.quickstart(MastodonFeed())
