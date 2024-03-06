@@ -1,18 +1,17 @@
 """Read home timeline into RSS"""
-from pathlib import Path
-import logging
 import base64
-from io import BytesIO
-from functools import lru_cache
+import logging
 import os
+from functools import lru_cache
+from io import BytesIO
+from pathlib import Path
 
 import cherrypy
-from feedgen.feed import FeedGenerator
 import requests
+from feedgen.feed import FeedGenerator
+from mastodon import Mastodon
 from PIL import Image
 from yarl import URL
-
-from mastodon import Mastodon
 
 logging.basicConfig(level=logging.DEBUG)
 
