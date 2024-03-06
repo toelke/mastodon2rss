@@ -11,6 +11,10 @@ import requests
 from feedgen.feed import FeedGenerator
 from mastodon import Mastodon
 from PIL import Image
+from prometheus_client import start_http_server
+from prometheus_client.core import (REGISTRY, CounterMetricFamily,
+                                    GaugeMetricFamily)
+from prometheus_client.registry import Collector
 from yarl import URL
 
 logging.basicConfig(level=logging.DEBUG)
@@ -35,6 +39,26 @@ def small_image(id):
     buffer = BytesIO()
     img.save(buffer, "PNG")
     return buffer.getvalue()
+
+
+class CustomCollector(Collector):
+    def collect(self):
+        data = small_image.cache_info()
+        yield GaugeMetricFamily(
+            "mastodon2rss_image_cache_maxsize", "maxsize of the image cache", value=data.maxsize
+        )
+        yield GaugeMetricFamily(
+            "mastodon2rss_image_cache_hits", "hits of the image cache", value=data.hits
+        )
+        yield GaugeMetricFamily(
+            "mastodon2rss_image_cache_misses", "misses of the image cache", value=data.misses
+        )
+        yield GaugeMetricFamily(
+            "mastodon2rss_image_cache_currsize", "currsize of the image cache", value=data.currsize
+        )
+
+
+REGISTRY.register(CustomCollector())
 
 
 def render_post(post):
@@ -166,4 +190,5 @@ class MastodonFeed:
 
 if __name__ == "__main__":
     cherrypy.config.update({"server.socket_host": "0.0.0.0", "server.socket_port": 12345})
+    start_http_server(8000)
     cherrypy.quickstart(MastodonFeed())

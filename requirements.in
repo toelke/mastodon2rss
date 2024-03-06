@@ -4,3 +4,4 @@ Mastodon.py
 Pillow
 requests
 yarl
+prometheus_client
