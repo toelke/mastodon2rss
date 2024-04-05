@@ -137,7 +137,7 @@ jaraco-collections==5.0.0 \
     --hash=sha256:1680e8d09f295f625c7ba926880175a26fdbe7092b4c76d198e30476b21cfe68 \
     --hash=sha256:a693d06b12718656921d79ba4f665f905014da09b35aa3deef43be4f14fdaa0d
     # via cherrypy
-jaraco-context==4.3.0 \
+jaraco-context==5.1.0 \
     --hash=sha256:4dad2404540b936a20acedec53355bdaea223acb88fd329fa6de9261c941566e \
     --hash=sha256:5d9e95ca0faa78943ed66f6bc658dd637430f16125d86988e77844c741ff2f11
     # via jaraco-text
@@ -638,3 +638,6 @@ setuptools==69.2.0 \
     --hash=sha256:0ff4183f8f42cd8fa3acea16c45205521a4ef28f73c6391d8a25e92893134f2e \
     --hash=sha256:c21c49fb1042386df081cb5d86759792ab89efca84cf114889191cd09aacc80c
     # via zc-lockfile
+jaraco.context==5.1.0 \
+    --hash=sha256:0e4161ebbaeead78850b4ca5465b5853217cf23ad74ec82d00ebfb69d8ea5fcb \
+    --hash=sha256:24ec1f739aec2c5766c68027ccc70d91d7b0cb931699442f5c7ed93515b955e7
