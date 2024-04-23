@@ -8,7 +8,7 @@ autocommand==2.2.2 \
     --hash=sha256:710afe251075e038e19e815e25f8155cabe02196cfb545b2185e0d9c8b2b0459 \
     --hash=sha256:878de9423c5596491167225c2a455043c3130fb5b7286ac83443d45e74955f34
     # via jaraco-text
-backports-tarfile==1.1.0 \
+backports-tarfile==1.1.1 \
     --hash=sha256:2688f159c21afd56a07b75f01306f9f52c79aebcc5f4a117fb8fbb4445352c75 \
     --hash=sha256:bcd36290d9684beb524d3fe74f4a2db056824c47746583f090b8e55daf0776e4
     # via jaraco-context
