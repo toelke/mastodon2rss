@@ -296,9 +296,9 @@ mastodon-py==1.8.1 \
     --hash=sha256:22bc7e060518ef2eaa69d911cde6e4baf56bed5ea0dd407392c49051a7ac526a \
     --hash=sha256:4a64cb94abadd6add73e4b8eafdb5c466048fa5f638284fd2189034104d4687e
     # via -r requirements.in
-more-itertools==10.2.0 \
-    --hash=sha256:686b06abe565edfab151cb8fd385a05651e1fdf8f0a14191e4439283421f8684 \
-    --hash=sha256:8fccb480c43d3e99a00087634c06dd02b0d50fbf088b380de5a41a015ec239e1
+more-itertools==10.3.0 \
+    --hash=sha256:e5d93ef411224fbcef366a6e8ddc4c5781bc6359d43412a65dd5964e46111463 \
+    --hash=sha256:ea6a02e24a9161e51faad17a8782b92a0df82c12c1c8886fec7f0c3fa1a1b320
     # via
     #   cheroot
     #   cherrypy
