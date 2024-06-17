@@ -148,7 +148,7 @@ jaraco-functools==4.0.1 \
     #   cheroot
     #   jaraco-text
     #   tempora
-jaraco-text==3.12.0 \
+jaraco-text==3.12.1 \
     --hash=sha256:1472f5a04a4cf77a0a3867495c24736ed9dc406070634934455323fa3a2c63de \
     --hash=sha256:389e25c8d4b32e9715bf530596fab0f5cd3aa47296e43969392e18a541af592c
     # via jaraco-collections
@@ -622,3 +622,6 @@ setuptools==70.0.0 \
     --hash=sha256:54faa7f2e8d2d11bcd2c07bed282eef1046b5c080d1c32add737d7b5817b1ad4 \
     --hash=sha256:f211a66637b8fa059bb28183da127d4e86396c991a942b028c6650d4319c3fd0
     # via zc-lockfile
+jaraco.text==3.12.1 \
+    --hash=sha256:b699491f9d074b4feafdfda0407fa5bbc5d83f485607a012e93472ba161f6843 \
+    --hash=sha256:bf12c58e9245eb6380d476f2ec623bb2e0a451e56bb9ed5bfd8493d6dc18ea2b
