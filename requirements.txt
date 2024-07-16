@@ -633,6 +633,6 @@ setuptools==70.2.0 \
     --hash=sha256:b8b8060bb426838fbe942479c90296ce976249451118ef566a5a0b7d8b78fb05 \
     --hash=sha256:bd63e505105011b25c3c11f753f7e3b8465ea739efddaccef8f0efac2137bac1
     # via zc-lockfile
-jaraco.text==3.12.1 \
-    --hash=sha256:b699491f9d074b4feafdfda0407fa5bbc5d83f485607a012e93472ba161f6843 \
-    --hash=sha256:bf12c58e9245eb6380d476f2ec623bb2e0a451e56bb9ed5bfd8493d6dc18ea2b
+jaraco.text==3.14.0 \
+    --hash=sha256:4ab672c0042e4725e05e3fdabdc86ff2eba852708afe8b62ffbf5fb84ed22d8f \
+    --hash=sha256:ed14e4df7753e40fdef3ca0eb53f6be9f5ef97481806e96de26c3a72e9c293f6
