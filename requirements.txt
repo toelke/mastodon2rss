@@ -513,9 +513,9 @@ six==1.16.0 \
     # via
     #   mastodon-py
     #   python-dateutil
-tempora==5.6.0 \
-    --hash=sha256:3bfcc12cbdbbbafecaaccb9097fc3754435b9d063dce43338e4fa87d39104aed \
-    --hash=sha256:af9e5c7fff8fd7b877a1cb4213e5dd93c50d09cdc85517ec31914790ef9468c5
+tempora==5.7.0 \
+    --hash=sha256:888190a2dbe3255ff26dfa9fcecb25f4d38434c0f1943cd61de98bb41c410c50 \
+    --hash=sha256:93dac0d33825e66c8314d7bd206b9ecb959075c8728bb05b9b050b2726d0442a
     # via portend
 typeguard==4.3.0 \
     --hash=sha256:4d24c5b39a117f8a895b9da7a9b3114f04eb63bade45a4492de49b175b6f7dfa \
