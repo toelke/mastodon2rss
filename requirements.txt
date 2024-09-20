@@ -485,9 +485,9 @@ portend==3.2.0 \
     --hash=sha256:5250a352c19c959d767cac878b829d93e5dc7625a5143399a2a00dc6628ffb72 \
     --hash=sha256:8b3fe3f78779df906559a21d9eaa6e21c8fa5a7a8cc76362cbbe1e16777399cf
     # via cherrypy
-prometheus-client==0.20.0 \
-    --hash=sha256:287629d00b147a32dcb2be0b9df905da599b2d82f80377083ec8463309a4bb89 \
-    --hash=sha256:cde524a85bce83ca359cc837f28b8c0db5cac7aa653a588fd7e84ba061c329e7
+prometheus-client==0.21.0 \
+    --hash=sha256:4fa6b4dd0ac16d58bb587c04b1caae65b8c5043e85f778f42f5f632f6af2e166 \
+    --hash=sha256:96c83c606b71ff2b0a433c98889d275f51ffec6c5e267de37c7a2b5c9aa9233e
     # via -r requirements.in
 python-dateutil==2.9.0.post0 \
     --hash=sha256:37dd54208da7e1cd875388217d5e00ebd4179249f90fb72437e91a35459a0ad3 \
