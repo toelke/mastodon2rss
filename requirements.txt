@@ -533,7 +533,7 @@ urllib3==2.2.3 \
     --hash=sha256:ca899ca043dcb1bafa3e262d73aa25c465bfb49e0bd9dd5d59f1d0acba2f8fac \
     --hash=sha256:e7d814a81dad81e6caf2ec9fdedb284ecc9c73076b62654547cc64ccdcae26e9
     # via requests
-yarl==1.13.1 \
+yarl==1.15.2 \
     --hash=sha256:08d7148ff11cb8e886d86dadbfd2e466a76d5dd38c7ea8ebd9b0e07946e76e4b \
     --hash=sha256:098b870c18f1341786f290b4d699504e18f1cd050ed179af8123fd8232513424 \
     --hash=sha256:11b3ca8b42a024513adce810385fcabdd682772411d95bbbda3b9ed1a4257644 \
