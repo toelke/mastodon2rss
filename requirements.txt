@@ -633,7 +633,7 @@ zc-lockfile==3.0.post1 \
     # via cherrypy
 
 # The following packages are considered to be unsafe in a requirements file:
-setuptools==75.1.0 \
+setuptools==75.2.0 \
     --hash=sha256:35ab7fd3bcd95e6b7fd704e4a1539513edad446c097797f2985e0e4b960772f2 \
     --hash=sha256:d59a21b17a275fb872a9c3dae73963160ae079f1049ed956880cd7c09b120538
     # via zc-lockfile
