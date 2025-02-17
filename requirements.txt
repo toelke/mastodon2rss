@@ -294,7 +294,7 @@ lxml==5.3.1 \
     --hash=sha256:f7b64fcd670bca8800bc10ced36620c6bbb321e7bc1214b9c0c0df269c1dddc2 \
     --hash=sha256:fb7c61d4be18e930f75948705e9718618862e6fc2ed0d7159b2262be73f167a2
     # via feedgen
-mastodon-py==1.8.1 \
+mastodon-py==2.0.0 \
     --hash=sha256:22bc7e060518ef2eaa69d911cde6e4baf56bed5ea0dd407392c49051a7ac526a \
     --hash=sha256:4a64cb94abadd6add73e4b8eafdb5c466048fa5f638284fd2189034104d4687e
     # via -r requirements.in
@@ -632,3 +632,6 @@ jaraco.context==6.0.1 \
 jaraco.collections==5.1.0 \
     --hash=sha256:0e4829409d39ad18a40aa6754fee2767f4d9730c4ba66dc9df89f1d2756994c2 \
     --hash=sha256:a9480be7fe741d34639b3c32049066d7634b520746552d1a5d0fcda07ada1020
+Mastodon.py==2.0.0 \
+    --hash=sha256:34f45aee283bda437f16d512d9a5c7f2cf39b427bff7282ac0a82339d65ed8c7 \
+    --hash=sha256:b2f08ffc19bf93db2cd2b7f11d785e847cd09d20127004de1aa089d20d402478
