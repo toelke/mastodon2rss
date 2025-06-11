@@ -496,9 +496,9 @@ pillow==11.2.1 \
     --hash=sha256:fdec757fea0b793056419bca3e9932eb2b0ceec90ef4813ea4c1e072c389eb28 \
     --hash=sha256:fe15238d3798788d00716637b3d4e7bb6bde18b26e5d08335a96e88564a36b6b
     # via -r requirements.in
-portend==3.2.0 \
-    --hash=sha256:5250a352c19c959d767cac878b829d93e5dc7625a5143399a2a00dc6628ffb72 \
-    --hash=sha256:8b3fe3f78779df906559a21d9eaa6e21c8fa5a7a8cc76362cbbe1e16777399cf
+portend==3.2.1 \
+    --hash=sha256:aa9d40ab1f9e14bdb7d401f42210df35d017c9b97991baeb18568cedfb8c6489 \
+    --hash=sha256:bd2bb1cd8585e32f1f986c1b8eae2950c8622c648db163b711a2fc2ef8d8d492
     # via cherrypy
 prometheus-client==0.22.1 \
     --hash=sha256:190f1331e783cf21eb60bca559354e0a4d4378facecf78f5428c39b675d20d28 \
