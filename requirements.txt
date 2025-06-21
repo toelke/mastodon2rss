@@ -135,7 +135,7 @@ inflect==7.5.0 \
     --hash=sha256:2aea70e5e70c35d8350b8097396ec155ffd68def678c7ff97f51aa69c1d92344 \
     --hash=sha256:faf19801c3742ed5a05a8ce388e0d8fe1a07f8d095c82201eb904f5d27ad571f
     # via jaraco-text
-jaraco-collections==5.1.0 \
+jaraco-collections==5.2.1 \
     --hash=sha256:808631b174b84a4e2a592490d62f62dfc15d8047a0f715726098dc43b81a6cfa \
     --hash=sha256:b117bacf6b69013741e34b0d75ca9c14e2ab983ad1ab4a2e6188627beffea8ee
     # via cherrypy
@@ -664,9 +664,9 @@ jaraco.functools==4.1.0 \
 jaraco.context==6.0.1 \
     --hash=sha256:9bae4ea555cf0b14938dc0aee7c9f32ed303aa20a3b73e7dc80111628792d1b3 \
     --hash=sha256:f797fc481b490edb305122c9181830a3a5b76d84ef6d1aef2fb9b47ab956f9e4
-jaraco.collections==5.1.0 \
-    --hash=sha256:0e4829409d39ad18a40aa6754fee2767f4d9730c4ba66dc9df89f1d2756994c2 \
-    --hash=sha256:a9480be7fe741d34639b3c32049066d7634b520746552d1a5d0fcda07ada1020
+jaraco.collections==5.2.1 \
+    --hash=sha256:dab81970bad6f0ab53b20745f1b01da37926e4c0fcd425046aa45e0d8efa18ed \
+    --hash=sha256:ea3415ddfc50206b6ba7d09c3deb358b76a5f8c1ddc82be788e8e8bd151ebfa8
 Mastodon.py==2.0.1 \
     --hash=sha256:5bb543ecbd7526bd50675d5d617ec04caa6b10d4002454cbf5641ad612723455 \
     --hash=sha256:f0a9cf59071347c7ff2ee49487d2520ca661f349f369b68845bdf3e43db1fff3
