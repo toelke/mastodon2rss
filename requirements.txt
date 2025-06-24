@@ -525,9 +525,9 @@ tempora==5.8.1 \
     --hash=sha256:6945ec409ca930e5040490931dc0d8f516f2cd9798eb175dc3b3c6a0fc481ea2 \
     --hash=sha256:abb5d9ec790cc5e4f9431778029ba3e3d9ba9bd50cb306dad824824b2b362dcd
     # via portend
-typeguard==4.4.3 \
-    --hash=sha256:7d8b4a3d280257fd1aa29023f22de64e29334bda0b172ff1040f05682223795e \
-    --hash=sha256:be72b9c85f322c20459b29060c5c099cd733d5886c4ee14297795e62b0c0d59b
+typeguard==4.4.4 \
+    --hash=sha256:3a7fd2dffb705d4d0efaed4306a704c89b9dee850b688f060a8b1615a79e5f74 \
+    --hash=sha256:b5f562281b6bfa1f5492470464730ef001646128b180769880468bd84b68b09e
     # via inflect
 typing-extensions==4.14.0 \
     --hash=sha256:8676b788e32f02ab42d9e7c61324048ae4c6d844a399eebace3d4979d75ceef4 \
