@@ -652,6 +652,6 @@ jaraco.context==6.0.1 \
 jaraco.collections==5.2.1 \
     --hash=sha256:dab81970bad6f0ab53b20745f1b01da37926e4c0fcd425046aa45e0d8efa18ed \
     --hash=sha256:ea3415ddfc50206b6ba7d09c3deb358b76a5f8c1ddc82be788e8e8bd151ebfa8
-Mastodon.py==2.0.1 \
-    --hash=sha256:5bb543ecbd7526bd50675d5d617ec04caa6b10d4002454cbf5641ad612723455 \
-    --hash=sha256:f0a9cf59071347c7ff2ee49487d2520ca661f349f369b68845bdf3e43db1fff3
+Mastodon.py==2.1.2 \
+    --hash=sha256:c1caa16e5eec22c3f4aba25131d7c8ad7954607d976271b0a0a81797f79834b1 \
+    --hash=sha256:e06cdcc937fa5ac704ac3b107a2e5fe49a0ee26bf46d30015fa1774bdd1e0c0c
