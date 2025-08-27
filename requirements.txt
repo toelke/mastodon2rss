@@ -259,7 +259,7 @@ lxml==6.0.1 \
     --hash=sha256:fa164387ff20ab0e575fa909b11b92ff1481e6876835014e70280769920c4433 \
     --hash=sha256:faa7233bdb7a4365e2411a665d034c370ac82798a926e65f76c26fbbf0fd14b7
     # via feedgen
-mastodon-py==2.0.1 \
+mastodon-py==2.1.2 \
     --hash=sha256:22bc7e060518ef2eaa69d911cde6e4baf56bed5ea0dd407392c49051a7ac526a \
     --hash=sha256:4a64cb94abadd6add73e4b8eafdb5c466048fa5f638284fd2189034104d4687e
     # via -r requirements.in
