@@ -1,2 +1,28 @@
+[project]
+name = "mastodon2rss"
+version = "0.1.0"
+description = "Convert Mastodon feeds to RSS"
+requires-python = ">=3.12"
+dependencies = [
+    "feedgen==1.0.0",
+    "CherryPy==18.10.0",
+    "Mastodon.py==2.1.2", 
+    "Pillow==11.3.0",
+    "requests==2.32.5",
+    "yarl==1.20.1",
+    "prometheus_client==0.22.1",
+]
+
 [tool.black]
 line-length = 105
+
+[tool.uv]
+dev-dependencies = [
+    "black",
+    "ruff",
+]
+
+# Configure for script-based project (no package structure needed)
+[build-system]
+requires = []
+build-backend = ""
