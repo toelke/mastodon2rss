@@ -7,7 +7,7 @@ dependencies = [
     "feedgen==1.0.0",
     "CherryPy==18.10.0",
     "Mastodon.py==2.1.4", 
-    "Pillow==11.3.0",
+    "Pillow==12.0.0",
     "requests==2.32.5",
     "yarl==1.20.1",
     "prometheus_client==0.23.1",
