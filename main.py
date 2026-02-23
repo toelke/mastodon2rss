@@ -70,6 +70,8 @@ def render_post(post):
         else f"""{post['account']['username']}""",
         "</div>",
     )
+    if 'spoiler_text' in post:
+        yield from ('<div style="font-weight: bold;">', post.get("spoiler_text"), "</div>")
     yield from ("<div>", post.get("content"), "</div>")
     for ma in post["media_attachments"]:
         if ma["type"] == "image":
