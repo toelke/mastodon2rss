@@ -123,6 +123,7 @@ class MastodonFeed:
         if creds.exists():
             self._mastodon = Mastodon(access_token=creds)
             self.logged_in = True
+            self._own_account_id = self._mastodon.me()["id"]
 
     def __init__(self):
         client_id, client_secret, api_base_url = get_app()
@@ -130,6 +131,7 @@ class MastodonFeed:
             client_id=client_id, client_secret=client_secret, api_base_url=api_base_url
         )
         self.logged_in = False
+        self._own_account_id = None
         self._try_login()
 
     @cherrypy.expose
@@ -143,6 +145,8 @@ class MastodonFeed:
         if self.logged_in:
             yield "<html><body>"
             for post in self._mastodon.timeline():
+                if post["account"]["id"] == self._own_account_id:
+                    continue
                 yield "<div>"
                 yield from render_post(post)
                 yield "</div>"
@@ -162,6 +166,8 @@ class MastodonFeed:
             fg.language("en")
             fg.id(f"https://{OWN_MASTODON_INSTANCE}/")
             for post in self._mastodon.timeline():
+                if post["account"]["id"] == self._own_account_id:
+                    continue
                 fe = fg.add_entry()
                 fe.id(post["uri"])
                 if post["url"] is not None:
