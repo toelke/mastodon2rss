@@ -10,7 +10,7 @@ dependencies = [
     "Pillow==12.1.1",
     "requests==2.33.0",
     "yarl==1.23.0",
-    "prometheus_client==0.24.1",
+    "prometheus_client==0.25.0",
 ]
 
 [tool.black]
