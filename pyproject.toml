@@ -8,7 +8,7 @@ dependencies = [
     "CherryPy==18.10.0",
     "Mastodon.py==2.1.4", 
     "Pillow==12.2.0",
-    "requests==2.33.0",
+    "requests==2.33.1",
     "yarl==1.23.0",
     "prometheus_client==0.25.0",
 ]
