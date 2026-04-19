@@ -61,6 +61,13 @@ class CustomCollector(Collector):
 REGISTRY.register(CustomCollector())
 
 
+def is_hidden_by_filter(post):
+    for f in post.get("filtered") or []:
+        if f.get("filter", {}).get("filter_action") == "hide":
+            return True
+    return False
+
+
 def render_post(post):
     yield from (
         "<div>",
@@ -149,6 +156,8 @@ class MastodonFeed:
             for post in self._mastodon.timeline():
                 if post["account"]["id"] == self._own_account_id:
                     continue
+                if is_hidden_by_filter(post):
+                    continue
                 yield "<div>"
                 yield from render_post(post)
                 yield "</div>"
@@ -169,6 +178,8 @@ class MastodonFeed:
             fg.id(f"https://{OWN_MASTODON_INSTANCE}/")
             for post in self._mastodon.timeline():
                 if post["account"]["id"] == self._own_account_id:
+                    continue
+                if is_hidden_by_filter(post):
                     continue
                 fe = fg.add_entry()
                 fe.id(post["uri"])
