@@ -193,6 +193,7 @@ class MastodonFeed:
             redirect_uri=str(PUBLIC_URL / "login_token"),
         )
         self.logged_in = True
+        self._own_account_id = self._mastodon.me()["id"]
         raise cherrypy.HTTPRedirect(str(PUBLIC_URL))
 
 
