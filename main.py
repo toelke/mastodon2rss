@@ -1,4 +1,5 @@
 """Read home timeline into RSS"""
+
 import base64
 import logging
 import os
@@ -12,8 +13,7 @@ from feedgen.feed import FeedGenerator
 from mastodon import Mastodon
 from PIL import Image
 from prometheus_client import start_http_server
-from prometheus_client.core import (REGISTRY, CounterMetricFamily,
-                                    GaugeMetricFamily)
+from prometheus_client.core import REGISTRY, CounterMetricFamily, GaugeMetricFamily
 from prometheus_client.registry import Collector
 from yarl import URL
 
@@ -65,9 +65,11 @@ def render_post(post):
     yield from (
         "<div>",
         f"""<img src="{get_smaller_image(post['account']['avatar'])}"/>""",
-        f"""<a href="{post.get("uri")}">{post['account']['username']}</a>"""
-        if post["uri"]
-        else f"""{post['account']['username']}""",
+        (
+            f"""<a href="{post.get("uri")}">{post['account']['username']}</a>"""
+            if post["uri"]
+            else f"""{post['account']['username']}"""
+        ),
         "</div>",
     )
     if 'spoiler_text' in post:
