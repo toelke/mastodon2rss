@@ -9,7 +9,7 @@ dependencies = [
     "Mastodon.py==2.2.1", 
     "Pillow==12.3.0",
     "requests==2.34.2",
-    "yarl==1.24.2",
+    "yarl==1.24.5",
     "prometheus_client==0.25.0",
 ]
 
