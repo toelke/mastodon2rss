@@ -276,16 +276,16 @@ wheels = [
 
 [[package]]
 name = "mastodon-py"
-version = "2.2.1"
+version = "2.2.2"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "decorator" },
     { name = "python-dateutil" },
     { name = "requests" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/ba/87/0c676d38a315bf659beb9e22952085825e59e87fece35ad44e0ccd26d799/mastodon_py-2.2.1.tar.gz", hash = "sha256:b52c85850272b4ff7a666b87c62432c5059f25c29fb485ffa1f608938744d8a4", size = 11737599, upload-time = "2026-04-12T12:41:06.838Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/cf/bf/91465842e820ac8c2c90fda9c7875ed40d3abb934e072d76cbdb4462027b/mastodon_py-2.2.2.tar.gz", hash = "sha256:07131f6ac8820462de25b7641622b01b22f2b9ab6b3e7252749442f51fd30778", size = 11781574, upload-time = "2026-08-03T11:07:03.623Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/e6/03/09b2f7a490ff60ee4f8e1a9ea4d34578bc7a288365ce5b3f4f606a9f4e47/mastodon_py-2.2.1-py3-none-any.whl", hash = "sha256:eb2a815ccc0c4b62417c531e07c02414e000c419abd319326843eb6370b772b3", size = 129905, upload-time = "2026-04-12T12:41:05.057Z" },
+    { url = "https://files.pythonhosted.org/packages/2f/ce/970923430cf0986470964445ccfde77f79a53dec34bd89927ccec49d1c63/mastodon_py-2.2.2-py3-none-any.whl", hash = "sha256:d18a107517836c783c93c9f2e713b4fad909fcd017f5036d2ce93d3dfd781904", size = 131248, upload-time = "2026-08-03T11:07:01.395Z" },
 ]
 
 [[package]]
@@ -312,7 +312,7 @@ dev = [
 requires-dist = [
     { name = "cherrypy", specifier = "==18.10.0" },
     { name = "feedgen", specifier = "==1.0.0" },
-    { name = "mastodon-py", specifier = "==2.2.1" },
+    { name = "mastodon-py", specifier = "==2.2.2" },
     { name = "pillow", specifier = "==12.3.0" },
     { name = "prometheus-client", specifier = "==0.26.0" },
     { name = "requests", specifier = "==2.34.2" },
