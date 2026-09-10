@@ -68,6 +68,38 @@ def is_hidden_by_filter(post):
     return False
 
 
+QUOTE_STATE_NOTES = {
+    "pending": "Quote is pending approval by the quoted author",
+    "rejected": "Quote was rejected by the quoted author",
+    "revoked": "Quote was revoked by the quoted author",
+    "deleted": "The quoted post was deleted",
+    "unauthorized": "The quoted post is not visible to you",
+}
+
+
+def render_quote(quote):
+    """Render the post quoted by a quote post, nested inside the quoting post"""
+    quoted = quote.get("quoted_status")
+    quoted_id = quote.get("quoted_status_id")
+    if quoted is not None and not is_hidden_by_filter(quoted):
+        body = render_post(quoted)
+    elif quoted_id is not None:
+        # A ShallowQuote carries only the id of the quoted post, local to our own
+        # instance, so link to it there instead of rendering it inline.
+        url = f"https://{OWN_MASTODON_INSTANCE}/statuses/{quoted_id}"
+        body = (f"""<div><em><a href="{url}">Quoted post</a></em></div>""",)
+    else:
+        # Nothing to render: the quote was not accepted, or the quoted post is hidden
+        # by a filter.
+        note = QUOTE_STATE_NOTES.get(quote.get("state"), "The quoted post is not available")
+        body = (f"<div><em>{note}</em></div>",)
+    yield from (
+        """<div style="margin-left: 40px; border-left: 3px solid #ccc; padding-left: 10px">""",
+        *body,
+        "</div>",
+    )
+
+
 def render_post(post):
     yield from (
         "<div>",
@@ -101,6 +133,8 @@ def render_post(post):
                 else ""
             )
             yield f"""<a href="{post['card']['url']}" target="_blank" rel="noopener noreferrer">{img}<div><strong>{post['card']['title']}</strong></div></a>"""
+    if post.get("quote") is not None:
+        yield from render_quote(post["quote"])
     if post["reblog"] is not None:
         yield from ("""<div style="margin-left: 40px">""", *render_post(post["reblog"]), "</div>")
 
