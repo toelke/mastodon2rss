@@ -4,7 +4,7 @@
 # are evaluated lazily (PEP 649/749), which roughly doubles that cost and pushes
 # /feed past the 15s proxy timeout on our deployment host.
 # smoke_test.py enforces this pin and will pass again once upstream is fixed.
-FROM python:3.13-slim AS python-base
+FROM python:3.14-slim AS python-base
 
 # Install uv
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /bin/uv
